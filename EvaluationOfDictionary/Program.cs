@@ -12,8 +12,10 @@ namespace EvaluationOfDictionary
         static Dictionary<int, Tmp> SearchStack = new Dictionary<int, Tmp>();
         static void Main(string[] args)
         {
+            //Hash collision hasn't occurred.
             Console.WriteLine("Class1!");
             Eval(0);    //400ms
+            //Hash collision.
             Console.WriteLine("Class2!");
             Eval(1);    //?
         }
@@ -30,7 +32,6 @@ namespace EvaluationOfDictionary
                 int iResult1 = cRandom.Next();
                 SearchStack[i] = c;
             }
-            // Random クラスの新しいインスタンスを生成する
 
             Stopwatch sw = new Stopwatch();
             Console.WriteLine("Start!");
